@@ -1,0 +1,22 @@
+{
+  "document_type": "receipt",
+  "supplier_name": "U-BAHN CAFÉ",
+  "receipt_date": "10.03.2025",
+  "total_tax_amount": "2,99",
+  "total_amount": "13,49",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Espresso",
+      "amount": "2,50"
+    },
+    {
+      "description": "Croissant",
+      "amount": "3,00"
+    },
+    {
+      "description": "Fruit Bowl",
+      "amount": "5,00"
+    }
+  ]
+}

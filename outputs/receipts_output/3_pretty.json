@@ -1,0 +1,19 @@
+{
+  "document_type": "receipt",
+  "supplier_name": "APPLE STORE",
+  "receipt_date": "03.02.2025",
+  "net_amount": "107,00",
+  "total_tax_amount": "17,00",
+  "total_amount": "124,00",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Apple Magic Mouse",
+      "amount": "79,00"
+    },
+    {
+      "description": "USB-C to HDMI Adapter",
+      "amount": "28,00"
+    }
+  ]
+}

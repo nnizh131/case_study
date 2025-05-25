@@ -1,0 +1,29 @@
+[project]
+name = "case-study"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faiss-cpu>=1.11.0",
+    "gcloud>=0.18.3",
+    "google-cloud-documentai>=3.5.0",
+    "google-cloud-storage>=3.1.0",
+    "google-cloud-workflows>=1.18.1",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.3",
+    "mlxtend>=0.23.4",
+    "numpy>=2.2.6",
+    "openai-clip>=1.0.1",
+    "pandas>=2.2.3",
+    "plotly>=6.1.0",
+    "python-dotenv>=1.1.0",
+    "pytorch-tabnet>=4.1.0",
+    "qdrant-client>=1.14.2",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "sentence-transformers>=4.1.0",
+    "shap>=0.47.2",
+    "torchvision>=0.22.0",
+    "umap>=0.1.1",
+]

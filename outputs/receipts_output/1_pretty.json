@@ -1,0 +1,25 @@
+{
+  "document_type": "receipt",
+  "supplier_name": "RESTAURANT\nSTARLIGHT",
+  "supplier_address": "123 Sunset Blvd.",
+  "supplier_phone": "(555) 987-6543",
+  "receipt_date": "01/15/2024",
+  "net_amount": "60,25",
+  "total_tax_amount": "5,23",
+  "total_amount": "65,48",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "2 x Grilled Salmon",
+      "amount": "38,00"
+    },
+    {
+      "description": "1 x Caesar Salad",
+      "amount": "12,50"
+    },
+    {
+      "description": "3 x Iced Tea",
+      "amount": "9,75"
+    }
+  ]
+}

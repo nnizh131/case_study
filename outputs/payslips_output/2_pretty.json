@@ -1,0 +1,8 @@
+{
+  "document_type": "payslip",
+  "employee_name": "John Doe",
+  "pay_date": "28/02/2025",
+  "start_date": "February 2025",
+  "gross_earnings": "5.000,00",
+  "net_pay": "4.000,00 EUR"
+}

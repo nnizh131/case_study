@@ -1,0 +1,69 @@
+main:
+  params: [input]
+  steps:
+    - start:
+        call: sys.log
+        args:
+          text: '${"Input: " + json.encode_to_string(input)}'
+
+    - vars:
+        assign:
+          - input_bucket: ${input.inputBucket}
+          - input_prefix: ${input.inputPrefix}
+          - output_bucket: ${input.outputBucket}
+          - output_prefix: ${input.outputPrefix}
+          - doc_type: ${input.docType}
+          - payslip_processor_id: ${input.payslipProcessorId}
+          - receipt_processor_id: ${input.receiptProcessorId}
+          - location: ${input.location}
+          - project_id: ${sys.get_env("GOOGLE_CLOUD_PROJECT_ID")}
+
+    - route_by_type:
+        switch:
+          - condition: ${doc_type == "payslip"}
+            next: use_payslip_processor
+          - condition: ${doc_type == "receipt"}
+            next: use_receipt_processor
+          - condition: true
+            next: unsupported
+
+    - use_payslip_processor:
+        call: googleapis.documentai.v1.projects.locations.processors.batchProcess
+        args:
+          name: ${"projects/" + project_id + "/locations/" + location + "/processors/" + payslip_processor_id}
+          location: ${location}
+          body:
+            inputDocuments:
+              gcsPrefix:
+                gcsUriPrefix: ${"gs://" + input_bucket + "/" + input_prefix}
+            documentOutputConfig:
+              gcsOutputConfig:
+                gcsUri: ${"gs://" + output_bucket + "/" + output_prefix}
+            skipHumanReview: true
+        result: batch_process_payslip
+
+    - return_payslip:
+        return: ${batch_process_payslip}
+
+    - use_receipt_processor:
+        call: googleapis.documentai.v1.projects.locations.processors.batchProcess
+        args:
+          name: ${"projects/" + project_id + "/locations/" + location + "/processors/" + receipt_processor_id}
+          location: ${location}
+          body:
+            inputDocuments:
+              gcsPrefix:
+                gcsUriPrefix: ${"gs://" + input_bucket + "/" + input_prefix}
+            documentOutputConfig:
+              gcsOutputConfig:
+                gcsUri: ${"gs://" + output_bucket + "/" + output_prefix}
+            skipHumanReview: true
+        result: batch_process_receipt
+
+    - return_receipt:
+        return: ${batch_process_receipt}
+
+    - unsupported:
+        raise:
+          message: "Unsupported docType. Must be 'payslip' or 'receipt'."
+          code: 400

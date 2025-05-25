@@ -1,0 +1,32 @@
+{
+  "document_type": "payslip",
+  "employee_name": "John Doe",
+  "employee_address": "456 Oak Avenue\nSpringfield, IL 62701",
+  "pay_date": "31/01/2025",
+  "gross_earnings": "5.000,00",
+  "gross_earnings_ytd": "5.000,00 EUR",
+  "net_pay": "3.917,50",
+  "net_pay_ytd": "3.917,50 EUR",
+  "taxes": [
+    {
+      "type": "Federal Income Tax",
+      "this_period": "550,00",
+      "ytd": "550,00 EUR"
+    },
+    {
+      "type": "State Income Tax",
+      "this_period": "EUR",
+      "ytd": "150,00"
+    },
+    {
+      "type": "Social Security Tax",
+      "this_period": "EUR",
+      "ytd": "310,00"
+    },
+    {
+      "type": "Medicare Tax",
+      "this_period": "72,50 EUR",
+      "ytd": "72,50 EUR"
+    }
+  ]
+}

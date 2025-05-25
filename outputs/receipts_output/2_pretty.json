@@ -1,0 +1,27 @@
+{
+  "document_type": "receipt",
+  "supplier_name": "BERLIN\nAPOTHEKE",
+  "receipt_date": "22.01.2025",
+  "net_amount": "76,98",
+  "total_tax_amount": "13,01",
+  "total_amount": "89,99",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "Ibuprofen 400mg",
+      "amount": "12,99"
+    },
+    {
+      "description": "Cough Syrup",
+      "amount": "9,50"
+    },
+    {
+      "description": "Vitamin D Tablets",
+      "amount": "15,00"
+    },
+    {
+      "description": "Blood Pressure Monitor",
+      "amount": "39,49"
+    }
+  ]
+}

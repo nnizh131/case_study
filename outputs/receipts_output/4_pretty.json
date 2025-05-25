@@ -1,0 +1,16 @@
+{
+  "document_type": "receipt",
+  "supplier_name": "CharitÃ© â€“ UniversitÃ¤tsmedizin Berlin",
+  "supplier_address": "CharitÃ©pl. 1\n10117 Berlin\nGermany",
+  "receipt_date": "19.03.2025",
+  "net_amount": "190,00",
+  "total_tax_amount": "20,00",
+  "total_amount": "210,00",
+  "currency": "EUR",
+  "line_items": [
+    {
+      "description": "IBTOTAL",
+      "amount": ""
+    }
+  ]
+}
